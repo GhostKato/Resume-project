@@ -1,79 +1,76 @@
 const individualProjects = [
-  {
-    preview:
-      'img/webstudio.png',
-    link:
-      'https://ghostkato.github.io/goit-markup-hw-06-vanilla/',
-    description: 'WEBSTUDIO',
-  },
-  {
-    preview:
-      'img/picture-gallery.png',
-    link:
-      'https://ghostkato.github.io/goit-js-hw-12/',
-    description: 'Picture Gallery',
-  },  
-];
+          {
+            preview: 'img/webstudio.png',
+            link: 'https://ghostkato.github.io/goit-markup-hw-06-vanilla/',
+            description: 'WEBSTUDIO',
+          },
+          {
+            preview: 'img/picture-gallery.png',
+            link: 'https://ghostkato.github.io/goit-js-hw-12/',
+            description: 'Picture Gallery',
+          },
+        ];
 
-const teamProjects = [
-  {
-    preview:
-      'img/green-harvest.png',
-    link:
-      'https://ghostkato.github.io/project-group-4-html-css/',
-    description: 'Green Harvest',
-  },
-  {
-    preview:
-      'img/green-harvest.png',
-    link:
-      'https://ghostkato.github.io/project-group-4-html-css/',
-    description: 'Green Harvest',
-  },  
-];
+        const teamProjects = [
+          {
+            preview: 'img/green-harvest.png',
+            link: 'https://ghostkato.github.io/project-group-4-html-css/',
+            description: 'Green Harvest',
+          },
+          {
+            preview: 'img/green-harvest.png',
+            link: 'https://ghostkato.github.io/project-group-4-html-css/',
+            description: 'Green Harvest',
+          },
+        ];
 
-const individualGallery = document.querySelector(".individual-gallery");
-const teamGallery = document.querySelector(".team-gallery");
+        document.addEventListener('DOMContentLoaded', () => {
+            const individualGallery = document.querySelector(".individual-gallery");
+            const teamGallery = document.querySelector(".team-gallery");
 
-function buildGallery(arr) {
-  return arr.map((item) => {
-    return `
-      <li class="gallery-item">
-        <a class="gallery-link" href="${item.link}" target="_blank">
-          <img
-            class="gallery-image"
-            src="${item.preview}"
-            alt="${item.description}"
-          />
-        </a>
-      </li>`;
-  }).join('');
-}
+            function buildGallery(arr) {
+              return arr.map((item) => {
+                return `
+                  <li class="gallery-item">
+                    <a class="gallery-link" href="${item.link}" target="_blank">
+                      <img
+                        class="gallery-image"
+                        src="${item.preview}"
+                        alt="${item.description}"
+                      />
+                    </a>
+                  </li>`;
+              }).join('');
+            }
 
-individualGallery.insertAdjacentHTML('beforeend', buildGallery(individualProjects));
-teamGallery.insertAdjacentHTML('beforeend', buildGallery(teamProjects));
+            if (individualGallery) {
+                individualGallery.insertAdjacentHTML('beforeend', buildGallery(individualProjects));
+            }
 
-const message = document.querySelector(".message-gallery")
-const titleGallery =document.querySelector(".title-gallery")
+            if (teamGallery) {
+                teamGallery.insertAdjacentHTML('beforeend', buildGallery(teamProjects));
+            }
 
-function handleMouseOver(event) {
-    if (event.target.tagName === 'IMG') {
-        const description = event.target.alt;
-        message.textContent = description;        
-    }
-}
+            const message = document.querySelector(".message-gallery");
 
-function handleMouseOut() {
-    message.textContent = '';    
-}
+            function handleMouseOver(event) {
+                if (event.target.tagName === 'IMG') {
+                    const description = event.target.alt;
+                    message.textContent = description;        
+                }
+            }
 
-individualGallery.addEventListener('mouseover', handleMouseOver);
-individualGallery.addEventListener('mouseout', handleMouseOut);
+            function handleMouseOut() {
+                message.textContent = '';    
+            }
 
-teamGallery.addEventListener('mouseover', handleMouseOver);
-teamGallery.addEventListener('mouseout', handleMouseOut);
+            if (individualGallery) {
+                individualGallery.addEventListener('mouseover', handleMouseOver);
+                individualGallery.addEventListener('mouseout', handleMouseOut);
+            }
 
-
-
-
-
+            if (teamGallery) {
+                teamGallery.addEventListener('mouseover', handleMouseOver);
+                teamGallery.addEventListener('mouseout', handleMouseOut);
+            }
+        });
