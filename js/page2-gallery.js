@@ -1,14 +1,14 @@
 const individualProjects = [
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
+      'img/webstudio.png',
     link:
       'https://ghostkato.github.io/goit-markup-hw-06-vanilla/',
     description: 'WEBSTUDIO',
   },
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg',
+      'img/picture-gallery.png',
     link:
       'https://ghostkato.github.io/goit-js-hw-12/',
     description: 'Picture Gallery',
@@ -18,14 +18,14 @@ const individualProjects = [
 const teamProjects = [
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
+      'img/green-harvest.png',
     link:
       'https://ghostkato.github.io/project-group-4-html-css/',
     description: 'Green Harvest',
   },
   {
     preview:
-      'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg',
+      'img/green-harvest.png',
     link:
       'https://ghostkato.github.io/project-group-4-html-css/',
     description: 'Green Harvest',
