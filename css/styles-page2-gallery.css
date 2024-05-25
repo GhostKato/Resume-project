@@ -7,6 +7,21 @@
 
 .title-gallery {
   margin-top: 30px;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: changeColor 3s infinite alternate;
+}
+
+@keyframes changeColor {
+  0% {
+    color: blue;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: green;
+  }
 }
 
 .gallery {
@@ -18,7 +33,8 @@
 .individual-gallery,
 .team-gallery {
   display: flex;
-  gap: 20px;
+  row-gap: 30px;
+  column-gap: 50px;
   margin-top: 30px;
 }
 
@@ -26,11 +42,30 @@
   height: 250px;
   width: 500px;
   overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 6px solid transparent;
+}
+
+.gallery-item:hover {
+  transform: scale(110%);
+  border-color: red;
+  border-radius: 5%;
 }
 
 .message-gallery {
   text-transform: uppercase;
   font-size: 50px;
   margin-top: 30px;
-  color: red;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: change 1s infinite alternate;
+}
+
+@keyframes change {
+  0% {
+    color: red;
+  }
+
+  100% {
+    color: yellow;
+  }
 }

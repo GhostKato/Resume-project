@@ -35,53 +35,36 @@ const teamProjects = [
 const individualGallery = document.querySelector(".individual-gallery");
 const teamGallery = document.querySelector(".team-gallery");
 
-        const individualProjectsGallery = individualProjects
-            .map((item) => {
-                return `                
-                <li class="gallery-item">
-                    <a class="gallery-link" href="${item.link}" target="_blank">
-                        <img
-                            class="gallery-image"
-                            src="${item.preview}"
-                            
-                            alt="${item.description}"
-                        />
-                    </a>
-                </li>`;
-            })
-    .join('');         
-   
-        const teamProjectsGallery = teamProjects
-            .map((item) => {
-                return `
-                <li class="gallery-item">
-                    <a class="gallery-link" href="${item.link}" target="_blank">
-                        <img
-                            class="gallery-image"
-                            src="${item.preview}"
-                            
-                            alt="${item.description}"
-                        />
-                    </a>
-                </li>`;
-            })
-            .join('');
+function buildGallery(arr) {
+  return arr.map((item) => {
+    return `
+      <li class="gallery-item">
+        <a class="gallery-link" href="${item.link}" target="_blank">
+          <img
+            class="gallery-image"
+            src="${item.preview}"
+            alt="${item.description}"
+          />
+        </a>
+      </li>`;
+  }).join('');
+}
 
-individualGallery.insertAdjacentHTML('beforeend', individualProjectsGallery);
-        
-teamGallery.insertAdjacentHTML('beforeend', teamProjectsGallery);
+individualGallery.insertAdjacentHTML('beforeend', buildGallery(individualProjects));
+teamGallery.insertAdjacentHTML('beforeend', buildGallery(teamProjects));
 
 const message = document.querySelector(".message-gallery")
+const titleGallery =document.querySelector(".title-gallery")
 
 function handleMouseOver(event) {
     if (event.target.tagName === 'IMG') {
         const description = event.target.alt;
-        message.textContent = description;
+        message.textContent = description;        
     }
 }
 
 function handleMouseOut() {
-    message.textContent = '';
+    message.textContent = '';    
 }
 
 individualGallery.addEventListener('mouseover', handleMouseOver);
