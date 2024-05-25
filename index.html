@@ -31,8 +31,48 @@
           <section class="section-info">
             <div class="my-info-container section">
               <h2 class="my-profession">Front-End Developer</h2>
-
               <h1 class="my-name">Maksym Osadchenko</h1>
+              <div class="parent-grid">
+                <div class="div1-grid">
+                  <img
+                    class="img-cont"
+                    src="img/my-photo.jpg"
+                    alt="My photo"
+                    width="100" />
+                </div>
+
+                <div class="div2-grid">
+                  <h3 class="info">Contacts</h3>
+                  <p class="">
+                    <a class="" href="tel:+380954219070">+38 095 421 90 70</a>
+                  </p>
+                  <p class="">
+                    <a class="" href="malto:osadchenko.maksym@gmail.com"
+                      >osadchenko.maksym@gmail.com</a
+                    >
+                  </p>
+                </div>
+
+                <div class="div3-grid">
+                  <h3 class="info">Tech Skills</h3>
+                  <ul class="skills-list">
+                    <li class="">HTML5</li>
+                    <li class="">CSS3</li>
+                    <li class="">GIT</li>
+                    <li class="">JavaScript</li>
+                  </ul>
+                </div>
+
+                <div class="div4-grid">
+                  <h3 class="info">Soft Skills</h3>
+                  <ul class="">
+                    <li class="">Scrum</li>
+                    <li class="">Agile</li>
+                    <li class="">GTD</li>
+                    <li class="">Teamwork</li>
+                  </ul>
+                </div>
+              </div>
               <p class="my-descr">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
@@ -45,7 +85,7 @@
           <!-- my-projects --------------------------------------------------------------------------->
 
           <section id="projects">
-            <div class="section">
+            <div class="section section-projects">
               <div>
                 <h3 class="my-projects-title">Іndividual projects</h3>
                 <ol class="my-projects-list">
@@ -57,8 +97,7 @@
                       >WEBSTUDIO</a
                     >
                     <span class="my-projects-item-tech"
-                      >................................................................................................................................
-                      [ HTML5, CSS3 ]
+                      >................................. [ HTML5, CSS3 ]
                     </span>
                   </li>
                   <li class="my-projects-item">
@@ -69,8 +108,7 @@
                       >Picture Gallery</a
                     >
                     <span class="my-projects-item-tech"
-                      >............................................................................................................................
-                      [ JavaScript ]</span
+                      >............................. [ JavaScript ]</span
                     >
                   </li>
                   <li class="my-projects-item">
@@ -81,8 +119,7 @@
                       >https://www.ukr.net/</a
                     >
                     <span class="my-projects-item-tech"
-                      >...............................................................................................................
-                      [ React.js, Node.js ]</span
+                      >................ [ React.js, Node.js ]</span
                     >
                   </li>
                 </ol>
@@ -99,15 +136,14 @@
                       >Green Harvest</a
                     >
                     <span class="my-projects-item-tech"
-                      >............................................................................................................................
-                      [ HTML5, CSS3 ]
+                      >............................. [ HTML5, CSS3 ]
                     </span>
                   </li>
                 </ol>
               </div>
             </div>
             <button
-              class="gallery-btn"
+              class="index-btn"
               type="button"
               onclick="window.location.href='page2-gallery.html';">
               Gallery my projects
@@ -119,6 +155,7 @@
           <section id="work-experience">
             <!-- Work 1 ----------------------------------------------------------->
             <div class="section">
+              <h3 class="my-projects-title">My works</h3>
               <div>
                 <h4 class="work-experience-company">
                   Front-End Developer
@@ -276,69 +313,6 @@
         </div>
       </aside>
     </div>
-
-    <!-- Sidebar-window -->
-
-    <!-- <div class="sidebar-backdrop" data-sidebar>
-      <div class="sidebar-container">        
-
-        <div class="contacts-container">
-          <h3 class="contacts-title">Contacts</h3>
-          <p class="contacts-item">
-            <span class="contacts-type">C:</span>
-            <a class="contacts-link" href="tel:+380954219070"
-              >+38 095 421 90 70</a
-            >
-          </p>
-          <p class="contacts-item">
-            <span class="contacts-type">E:</span>
-            <a class="contacts-link" href="malto:osadchenko.maksym@gmail.com"
-              >osadchenko.maksym@gmail.com</a
-            >
-          </p>
-        </div>
-
-        <div class="skills-container">
-          <h3 class="skills-title">Tech Skills</h3>
-          <ul class="skills-list">
-            <li class="skills-list-item">HTML5</li>
-            <li class="skills-list-item">CSS3</li>
-            <li class="skills-list-item">GIT</li>
-            <li class="skills-list-item">JavaScript</li>
-          </ul>
-        </div>
-
-        <div class="soft-container">
-          <h3 class="soft-title">Soft Skills</h3>
-          <ul class="soft-list">
-            <li class="soft-list-item">Scrum</li>
-            <li class="soft-list-item">Agile</li>
-            <li class="soft-list-item">GTD</li>
-            <li class="soft-list-item">Teamwork</li>
-          </ul>
-        </div>
-
-        <nav>
-          <ul class="sidebar-navigation-list">
-            <li class="sidebar-navigation-list-item">
-              <a class="sidebar-list-item-link" href="#projects">Projects</a>
-            </li>
-            <li class="sidebar-navigation-list-item">
-              <a
-                class="sidebar-list-item-link scroll-to"
-                href="#work-experience"
-                >Work Experience</a
-              >
-            </li>
-            <li class="sidebar-navigation-list-item">
-              <a class="sidebar-list-item-link scroll-to" href="#education"
-                >Education</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div> -->
     <script type="module" src="./main.js"></script>
   </body>
 </html>
