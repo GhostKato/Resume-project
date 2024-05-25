@@ -43,7 +43,7 @@ const teamGallery = document.querySelector(".team-gallery");
                         <img
                             class="gallery-image"
                             src="${item.preview}"
-                            data-source="${item.link}"
+                            
                             alt="${item.description}"
                         />
                     </a>
@@ -59,7 +59,7 @@ const teamGallery = document.querySelector(".team-gallery");
                         <img
                             class="gallery-image"
                             src="${item.preview}"
-                            data-source="${item.link}"
+                            
                             alt="${item.description}"
                         />
                     </a>
@@ -67,8 +67,30 @@ const teamGallery = document.querySelector(".team-gallery");
             })
             .join('');
 
-        individualGallery.insertAdjacentHTML('beforeend', individualProjectsGallery);
+individualGallery.insertAdjacentHTML('beforeend', individualProjectsGallery);
         
-        teamGallery.insertAdjacentHTML('beforeend', teamProjectsGallery);
+teamGallery.insertAdjacentHTML('beforeend', teamProjectsGallery);
+
+const message = document.querySelector(".message-gallery")
+
+function handleMouseOver(event) {
+    if (event.target.tagName === 'IMG') {
+        const description = event.target.alt;
+        message.textContent = description;
+    }
+}
+
+function handleMouseOut() {
+    message.textContent = '';
+}
+
+individualGallery.addEventListener('mouseover', handleMouseOver);
+individualGallery.addEventListener('mouseout', handleMouseOut);
+
+teamGallery.addEventListener('mouseover', handleMouseOver);
+teamGallery.addEventListener('mouseout', handleMouseOut);
+
+
+
 
 
