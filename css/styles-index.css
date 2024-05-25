@@ -103,6 +103,29 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.contacts-title,
+.skills-title,
+.contacts-title,
+.contacts-item,
+.skills-list-item,
+.soft-list-item {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.my-projects-item-link:hover {
+  animation: animat 1s infinite alternate;
+}
+
+@keyframes animat {
+  0% {
+    color: red;
+  }
+
+  100% {
+    color: goldenrod;
+  }
+}
+
 @media screen and (min-width: 375px) {
   .container {
     width: 375px;
@@ -233,7 +256,7 @@ body {
   .skills-container,
   .soft-container,
   .contacts-container {
-    background-color: rgba(100, 0, 220, 0.3);
+    background-color: rgba(92, 71, 111, 0.453);
   }
 
   .parent-grid {
