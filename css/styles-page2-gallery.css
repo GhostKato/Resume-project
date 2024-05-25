@@ -1,0 +1,29 @@
+.background {
+  background-color: #d8effd;
+}
+.gallery-btn {
+  margin-top: 30px;
+}
+
+.title-gallery {
+  margin-top: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.individual-gallery,
+.team-gallery {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  height: 250px;
+  width: 500px;
+  overflow: hidden;
+}
